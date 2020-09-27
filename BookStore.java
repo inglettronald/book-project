@@ -1,5 +1,5 @@
 // --== CS400 File Header Information ==--
-// Name: Ronnie Inglett & Keegan Ripley
+// Name: Ronnie Inglett
 // Email: ringlett@wisc.edu
 // Team: EE
 // TA: Keren Chen
