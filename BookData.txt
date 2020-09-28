@@ -1,4 +1,4 @@
-1501145254 My_Own_Words 5 Bibliography 2
-1771681926 Sincerely, 8 Romance 3
-1442402973 Creepy_Carrots 10 Children's 5
-0064442466 The_Fat_Cat_Sat_on_the_Mat 5 Children's 1
+1501145254 My_Own_Words Bibliography 2
+1771681926 Sincerely, Romance 3
+1442402973 Creepy_Carrots Children's 5
+0064442466 The_Fat_Cat_Sat_on_the_Mat Children's 1
