@@ -23,18 +23,19 @@ public class BookStore extends BookCollection
 		Book[] books = getInitialBooks();
 		
 		table = new HashTableMap<Integer, Book>(20);
-		for (Book b : books)
+		
+		// Put the objects from Book.txt into the hash table
+		for (int i = 0; i < books.length && books[i] != null; ++i)
 		{
-			System.out.println(b.toString());
-			numBooks = numBooks + b.getQuantity();
+			numBooks = numBooks + books[i].getQuantity();
 			// If the object already exists in the hash table, we want to update the quantity of that item in the hash table. This ends up being somewhat
-			// of a lengthy statement.
-			if (table.containsKey(b.getIsbn()))
+			// of a lengthy statement, because you have to reference the key of the book multiple times. However I didn't feel like making a new variable.
+			if (table.containsKey(books[i].getIsbn()))
 			{
-				table.get(b.getIsbn()).setQuantity(table.get(b.getIsbn()).getQuantity() + b.getQuantity());
+				table.get(books[i].getIsbn()).setQuantity(table.get(books[i].getIsbn()).getQuantity() + books[i].getQuantity());
 			}
 			else
-				table.put(b.getIsbn(), b);
+				table.put(books[i].getIsbn(), books[i]);
 			
 		}
 	}
