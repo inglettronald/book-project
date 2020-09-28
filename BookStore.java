@@ -16,11 +16,11 @@ public class BookStore extends BookCollection
 	/**
 	 * Constructor that sets up a HashTable for the book store. Begins with default size 20.
 	 */
-	public BookStore()
+	public BookStore(int cap)
 	{
-		super(20);
+		super(cap);
 		Book[] books = getInitialBooks();
-		table = new HashTableMap<Integer, Book>(20);
+		table = new HashTableMap<Integer, Book>(cap);
 		for (Book b : books)
 		{
 			numBooks = numBooks + b.getQuantity();
