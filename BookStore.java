@@ -6,6 +6,10 @@
 // Lecturer: Florian Heimerl
 // Notes to Grader: This class is meant to do the work of setting up the hash table for the incoming books. This has some preliminary stuff, so it will
 // need to be constructed by the user.
+//
+// IMPORTANT: When calling an isbn key with leading zeros, you MUST remove them. Hashcode will tell the difference and give you unintended results. This
+// particular feature was discovered late into the project timeline and does not cause issues for this particular implementation, as the BookStoreDriver
+// unintentionally chops those digits off. In fact, this probably would have gone undiscovered if not for the way that we handled isbn inputs.
 
 import java.util.NoSuchElementException;
 public class BookStore extends BookCollection
@@ -36,7 +40,6 @@ public class BookStore extends BookCollection
 			}
 			else
 				table.put(books[i].getIsbn(), books[i]);
-			
 		}
 	}
 
